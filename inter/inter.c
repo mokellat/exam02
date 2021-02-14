@@ -6,7 +6,6 @@ int main(int argc, char **argv)
 	int i = 0;
 	int j = 0;
 	int index = 0;
-	int in_tmp;
 	char tmp[500];
 	
 	if(argc <= 2)
@@ -33,7 +32,6 @@ int main(int argc, char **argv)
 		tmp[index + 1] = '\0';
 		i = 0;
 		j = 0;
-		in_tmp = index;
 		while(i < index)
 		{
 			j = i + 1;
