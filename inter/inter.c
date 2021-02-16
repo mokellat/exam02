@@ -50,7 +50,11 @@ int main(int argc, char **argv)
 			}
 			i++;
 		}
-		tmp[index] = '\0';	
+		tmp[index] = '\0';
 	}
-	printf("%s\n", tmp);
+	for(i = 0; i < index; i++)
+	{
+		write(1, &tmp[i], 1);
+	}
+	
 }
