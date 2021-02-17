@@ -17,27 +17,20 @@ int main(int argc, char **argv)
         while(argv[2][j])
             tmp[index++] = argv[2][j++];
     }
-		tmp[index + 1] = '\0';
-		i = 0;
-		j = 0;
-		while(i < index)
+		tmp[index] = '\0';
+		for(i = 0; i < index; i++)
 		{
-			j = i + 1;
-			while(j < index)
+			for(j = i + 1; j < index;)
 			{
 				if(tmp[i] == tmp[j])
 				{
-					for(int k = j; k < index - 1; k++)
-					{
+					for(int k = j; k < index; k++)
 						tmp[k] = tmp[k + 1];
-                        
-					}
 					index--;
 				}
 				else
 					j++;
 			}
-			i++;
 		}
 		tmp[index] = '\0';
         i = 0;
